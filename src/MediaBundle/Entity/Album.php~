@@ -14,11 +14,13 @@ class Album
 
     /**
      * @var string
+	 * @ORMOneToMany(targetEntity="title", mappedBy="comment", cascade={"persist", "remove", "merge"})
      */
     private $title;
 
     /**
      * @var string
+	 *
      */
     private $artiste;
 
