@@ -1,0 +1,22 @@
+MediaBundle\Entity\Comment:
+    type: entity
+    table: null
+    repositoryClass: MediaBundle\Repository\CommentRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        utilisateur:
+            type: string
+            length: '255'
+        commentaire:
+            type: text
+    lifecycleCallbacks: {  }
+
+    oneToMany:
+      comments:
+        targetEntity: Album
+        mappedBy: album
