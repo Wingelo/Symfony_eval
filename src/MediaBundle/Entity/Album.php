@@ -14,7 +14,7 @@ class Album
 
     /**
      * @var string
-	 * @ORMOneToMany(targetEntity="Departement", mappedBy="region", cascade={"persist", "remove", "merge"})
+	 * @ORMOneToMany(targetEntity="title", mappedBy="comment", cascade={"persist", "remove", "merge"})
      */
     private $title;
 
